@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Modules for the future journalists ">
+    <meta name="author" content="Javier Trujillo">
+
+    <title>Modules</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/bootstrap/dashboard.css" rel="stylesheet">
+	<style>
+		.hid{
+			visibility:hidden;
+		}
+		
+#logoScribe{
+	height:56px;
+	position:relative;
+	left:3%;
+}
+</style>
+<body>
+ 
+   <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+      	<a href="../Scribe/modules.html">
+          <img id="logoScribe"  src="img/icons/logo.png" />
+        </a> 
+       
+        
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+    	<div class="row">
+         <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="" style="text-align: center"> Citations</a></li>
+          </ul>
+          <p style=" word-wrap: break-word;">This module will provide the journalist with an automatic way of setting up their bibliographies without having to type them manually.</p>
+          <br>
+          <p style=" word-wrap: break-word;"><span class="quest">How we can implement it in our tool:</span><br>
+          	In the editor section, when the journalist decides to use a given source the module will automatically create a bibliography with such source mentioned.</p>
+          <br>
+          <p style=" word-wrap: break-word;"><span class="quest">What’s the benefit for the journalist?</span><br>
+It will speed up their writing process because they won’t have to care about looking for the sources and following the standards of citation when set up their bibliographies.</p>
+        
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        	<div class="containerk">
+        		<form class="form-inline">
+				<input type="text" class="form-control" placeholder="Type reference" value="Google Analytics" style="width: 50%" disabled> 
+				<button id="send" type="button" class="btn btn-default">Search</button>
+				</form>
+			</div> 
+			<br>
+			
+			<!-- here we put the modal to display -->
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title" id="myModalLabel">Cite</h4>
+			      </div>
+			      <div class="modal-body">
+			        Click on the format to add to your bibliography
+			      </div>
+			      <div class="modal-footer">
+			      	<div class="list-group">
+					  <a href="#" class="list-group-item" id="citMLA">
+					    <h4 class="list-group-item-heading">MLA</h4>
+					    <p class="list-group-item-text">Clifton, Brian. Advanced web metrics with Google Analytics. John Wiley & Sons, 2012</p>
+					  </a>
+					  <a href="#" class="list-group-item" id="citAPA">
+					    <h4 class="list-group-item-heading">APA</h4>
+					    <p class="list-group-item-text">Clifton, B. (2012). Advanced web metrics with Google Analytics. John Wiley & Sons.</p>
+					  </a>
+					  <a href="#" class="list-group-item" id="citCHICAGO">
+					    <h4 class="list-group-item-heading">CHICAGO</h4>
+					    <p class="list-group-item-text">Clifton, Brian. Advanced web metrics with Google Analytics. John Wiley & Sons, 2012.</p>
+					  </a>
+					</div>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			
+			<!-- Table -->
+			<div class="table-responsive">
+            <table class="table table-striped hid">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Cite</th>
+                  <th>Format</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Advanced web metrics with Google Analytics</td>
+                  <td><button type="button" class="btn btn-xs btn-info"  id="este" data-toggle="modal" data-target="#myModal">Info</button></td>
+                  <td id="formatTd"></td>
+                </tr>
+                <tr>
+                  <td>Google Analytics for measuring website performance</td>
+                  <td><button type="button" class="btn btn-xs btn-info"  data-toggle="modal" >Info</button></td>
+                  <td></td>
+                </tr>
+                  <tr>
+                  <td>Using Google Analytics to evaluate the usability of e-commerce sites</td>
+                  <td><button type="button" class="btn btn-xs btn-info"  data-toggle="modal" >Info</button></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <br><br>
+		<h2 class="sub-header">Bibliography</h2>
+		<ol class="biblio">
+			
+		</ol>
+		</div>
+        </div>	
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    	$(document).ready(function(){
+    		$("#send").click(function(){
+    			$("table").removeClass("hid");
+    		});
+    		
+            $("#citMLA").click(function(){
+            	$('#myModal').modal("toggle");
+            	$("#este").removeClass("btn-info").addClass("btn-success").html("Done");
+            	$("#formatTd").html("MLA");
+            	$("<li></li>").html("Clifton, Brian. Advanced web metrics with Google Analytics. John Wiley & Sons, 2012").appendTo(".biblio");
+            });
+            $("#citAPA").click(function(){
+            	$('#myModal').modal("toggle");
+            	$("#este").removeClass("btn-info").addClass("btn-success").html("Done");
+            	$("#formatTd").html("APA");
+            	$("<li></li>").html("Clifton, B. (2012). Advanced web metrics with Google Analytics. John Wiley & Sons.").appendTo(".biblio");
+            });
+            $("#citCHICAGO").click(function(){
+            	$('#myModal').modal("toggle");
+            	$("#este").removeClass("btn-info").addClass("btn-success").html("Done");
+            	$("#formatTd").html("MLA");
+            	$("<li></li>").html("Clifton, Brian. Advanced web metrics with Google Analytics. John Wiley & Sons, 2012.").appendTo(".biblio");
+            });
+            
+    	});
+    	
+    </script>
+  </body>
+</html>

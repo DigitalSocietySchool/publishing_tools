@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Modules for the future journalists ">
+    <meta name="author" content="Javier Trujillo">
+
+    <title>Modules</title>
+
+     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+        <link href="inputfile/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="inputfile/fileinput.min.js" type="text/javascript"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" type="text/javascript"></script>
+          <link href="css/bootstrap/dashboard.css" rel="stylesheet">
+
+    <style>
+    	.hid{
+    		visibility:hidden;
+    	}
+    	
+    	#preview{
+    		text-align:center;
+    	}
+    	
+    	.guay{
+    		border:1px solid;
+    		background: blue;
+    	}
+    	.quest{
+    		font-style: italic;
+    		font-size: 20px;
+    	}
+    	
+    	div.upload {
+    width: 157px;
+    height: 57px;
+    background: url(https://lh6.googleusercontent.com/-dqTIJRTqEAQ/UJaofTQm3hI/AAAAAAAABHo/w7ruR1SOIsA/s157/upload.png);
+    overflow: hidden;
+}
+
+div.upload input {
+    display: block !important;
+    width: 157px !important;
+    height: 57px !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+}
+  #logoScribe{
+	height:56px;
+	position:relative;
+	left:3%;
+}
+</style>
+<body>
+ 
+   <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+      	<a href="../Scribe/modules.html">
+          <img id="logoScribe"  src="img/icons/logo.png" />
+        </a> 
+       
+        
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+	 <div class="container-fluid">
+    	<div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="" style="text-align: center"> Audio to text</a></li>
+          </ul>
+          <p style=" word-wrap: break-word;">A module which allows for turning speech into text.</p>
+          <br>
+          <p style=" word-wrap: break-word;"><span class="quest">How we can implement it in our tool:</span><br>
+          	This module would be used when collecting data to write a story. That is why it would be make sense to placed it in the editor section.</p>
+          <br>
+          <p style=" word-wrap: break-word;"><span class="quest">What's the benefit for the journalist?</span><br>
+They will be able to automatically get their audio content (such as interviews or notes) written, thus speeding up their working flow.</p>
+        
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        	<div class="panel panel-info">
+        		<div class="panel-heading">
+				     <h2 >Select audio file to convert</h2>
+				  </div>
+				   <div class="panel-body">
+				   <div class="container kv-main">
+            
+            <form enctype="multipart/form-data">
+                <input id="file-0a" class="file" type="file" multiple data-min-file-count="1">
+                <br>
+            </form>
+            <button id="convert" class="btn btn-primary">Convert</button>
+
+             </div>
+					</div>
+					</div>  		
+          <br>
+			<!--<button type="button" id="converter" class="btn btn-default"aria-expanded="false">Convert</button> -->
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+			    <span class="sr-only">60% Complete</span>
+			  </div>
+			</div>
+			
+			<div id="textResult" class="row hid">
+			        <a id="preview" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+			           <h3>See Preview</h3>
+		            </a>
+				 <div id="collapseOne" class="panel-collapse collapse well" role="tabpanel" aria-labelledby="headingOne">
+			      <div class="panel-body">
+			        
+			        On what he has learned so far about ­running India: The biggest challenge was that I was new to the federal government structures. Different departments tend to work in silos—each department seems to [be] a government in itself. My effort has been to break these silos down, [so that] everybody … looks at a problem in a collective manner. I see the federal government not as an assembled entity but as an organic entity.
+<br><br>
+On how he sees the U.S.: We are natural allies … [It’s not] what India can do for the U.S., what the U.S. can do for India … The way we should look at it is what India and the U.S. can together do for the world … strengthening democratic values all over.
+<br><br>
+On the possibility of the Taliban’s returning to power in Afghanistan: The drawdown of U.S. troops is, of course, an independent decision of the American government, but in the interest of a stable government in Afghanistan, it would be important to hold consultations with the Afghan government to understand their security needs as the U.S. troops draw down.
+			        
+			        
+			        
+			        
+			        </div>
+		        </div>
+	       </div>
+	      
+	   </div>
+	   </div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+     $("#convert").on("click",function(){
+     	bar();
+     });
+		/*$("#converter").click(function(){
+			$(".progress-bar").delay(800)
+			  .queue(function (next) { 
+			    $(this).css('width', '100%'); 
+			    next(); 
+                });*/
+               function bar(){
+               
+              $(".progress-bar").animate({
+              	width:"100%"},
+              2000, function(){
+              	$("#textResult").removeClass("hid");
+              
+              });
+       		     
+		     }
+		
+	</script>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+/*Style for the summary modules page */
+
+.placeholder h4{
+	text-align:center;
+}
+
+.miniNav a{
+    	text-decoration:underline;
+    }
+ 
+/*Main container panel */
+.panel-info{
+	 border-color: transparent;
+}
+.panel-info>.panel-heading {
+  color: white;
+  background-color: #337291;
+}
+
+/*Boxes (modules) in the container */
+
+.moduleBox{
+	height:200px;
+	border:4px solid transparent;
+}
+.moduleBox:hover{
+	cursor:pointer;
+	background:0;
+	border:4px solid #bec3c7;
+}
+.description{
+	padding:20px;
+	padding-top:30px;
+}
+.enabler{
+	width:30%;margin:10px auto;
+}
+/*personal images for every module */
+.moduleSentiment{
+	background:url('../../img/modules/iconsmodules-01.png') no-repeat center;
+}
+.moduleTag{
+	background:url('../../img/modules/iconsmodules-02.png') no-repeat center;
+}
+.moduleImpact{
+	background:url('../../img/modules/iconsmodules-03.png') no-repeat center;
+}
+.moduleAnnotations{
+	background:url('../../img/modules/annotations.png') no-repeat center;
+}
+.moduleGeo{
+	background:url('../../img/modules/geotagging.png') no-repeat center;
+}
+.moduleCitations{
+	background:url('../../img/modules/citations.png') no-repeat center;
+}
+.moduleTranslations{
+	background:url('../../img/modules/translation.png') no-repeat center;
+}
+.moduleAudio{
+	background:url('../../img/modules/audiototext.png') no-repeat center;
+}
+.moduleCameras{
+	background:url('../../img/modules/local cameras.png') no-repeat center;
+}
+
+/*----------Style for the ON/OFF switch -------------*/
+.onoffswitch {
+    position: relative; width: 88px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 19px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    -moz-transition: margin 0.3s ease-in 0s; -webkit-transition: margin 0.3s ease-in 0s;
+    -o-transition: margin 0.3s ease-in 0s; transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 32px; padding: 0; line-height: 32px;
+    font-size: 16px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "ON";
+    padding-left: 14px;
+    background-color: #EEEEEE; color: #4F4343;
+}
+.onoffswitch-inner:after {
+    content: "OFF";
+    padding-right: 14px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 24px; margin: 4px;
+    background: #BEC3C7;
+    border: 2px solid #999999; border-radius: 19px;
+    position: absolute; top: 0; bottom: 0; right: 57px;
+    -moz-transition: all 0.3s ease-in 0s; -webkit-transition: all 0.3s ease-in 0s;
+    -o-transition: all 0.3s ease-in 0s; transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+    background-color: #337291; 
+}
+

@@ -1,0 +1,64 @@
+/*+++++++++++Style for the statistics page +++++++++++++*/
+.panel-heading{
+	border-bottom:0;
+}
+
+
+#listTitles{
+	height:200px;
+	overflow-y:auto;
+	margin-top:15px;
+}
+
+/**********style for the scrollbar of the list of titles **********************/
+
+/* Let's get this party started */
+.panel-body ::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+/* Track */
+.panel-body  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+.panel-body  ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255,0,0,0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+.panel-body ::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(255,0,0,0.4); 
+}
+
+/*******END: style for the scrollbar of the list of titles **********************/
+
+.titleSelected{
+	background:#e94c3d;
+}
+
+/**** style for the button that allows you create more statistics ****/
+#addSocialFeed{
+	background:url('../../img/statistics/social.png') no-repeat center;
+	width:210px;
+	height:55px;
+	margin-bottom:7%;
+	margin-top:1%;
+}
+#addSocialFeed:hover{
+	cursor:pointer;
+	opacity: 0.8;
+}
+
+
+
+/*************** style for the boxes which contain the statistics selected *****/
+
+.statisticsDisplayed .panel-body{
+	height:279.4px ;
+}
+

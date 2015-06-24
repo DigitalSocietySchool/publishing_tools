@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Modules for the future journalists ">
+    <meta name="author" content="Javier Trujillo">
+
+    <title>Scribe</title>
+	<link rel="icon" 
+      type="image/png" 
+      href="img/favicon.png">
+    <!-- Bootstrap core CSS -->
+   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/bootstrap/dashboard.css" rel="stylesheet">
+ 
+    <!-- CSS for the draggable feature -->
+    <link rel="stylesheet" type="text/css" href="css/gridster/jquery.gridster.css">
+    <link rel="stylesheet" type="text/css" href="css/gridster/demo.css">
+  	<link rel="stylesheet" type="text/css" href="css/gridster/homepage.css" >
+  	
+  	<!--Personal CSS for the pages -->
+  	
+  	<link href="css/personalPage/homepage.css" rel="stylesheet">
+  	<link href="css/personalPage/commonNavigation.css" rel="stylesheet">
+   <style>
+   
+   </style>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header leftCorner">
+          <img id="hamburgerRightNav" class="hid" src="img/icons/nav/hamburgermenu.png"/>
+          <a href="homepage.html">
+          <img id="logoScribe"  src="img/icons/logo.png" />
+          </a>  
+         </div>
+          <div class="rightCorner">
+          	<img id="messageIcon" src="img/icons/nav/mail.png" />
+          	<span class="name">Jimmy Miller</span>
+          	<img id="arrowRightNav" src="img/icons/arrows up.png"/>
+          	<img src="img/icons/chat/profile-07.png" />
+          </div>
+        </div>   
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar navleft">
+          <div class="mainMenu">
+          	<img id="arrowLeftNav" src="img/icons/nav/arrow navigation.png"/>
+          	<p>Main menu </p>
+          	<hr>
+          </div>
+          <ul class="navigat nav-sidebar">
+            <!--<li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li> -->
+            <li class="active"><a href="homepage.html"><img src="img/icons/home.png"/>Home</a></li>
+            <li><a href="#"><img src="img/icons/my stories.png"/>My stories</a></li>
+            <li><a href="StoryEditor.html"><img src="img/icons/story editor.png"/>Story Editor</a></li>
+            <li><a href="modules.html"><img src="img/icons/modules.png"/>Modules</a></li>
+            <li><a href="#"><img src="img/icons/pinboard.png"/>Pinboard</a></li>
+            <li><a href="statistics.html"><img src="img/icons/statistics.png"/>Statistics</a></li>
+            <li><a href="socialFeed.html"><img src="img/icons/social feed.png"/>Social feed</a></li>
+            <li><a href="#"><img src="img/icons/agenda.png"/>Agenda</a></li>
+            <li><a href="#"><img src="img/icons/contacts.png"/>Contacts</a></li>
+            <li><a href="#"><img src="img/icons/settings.png"/>Settings</a></li>
+          </ul>
+        </div>
+        
+        <!-- central content -->
+        <div class="col-sm-9 col-sm-offset-3 col-md-8 col-md-offset-2 main ">
+		<div class="resumeInfo titles">
+		<b>Welcome Jimmy,</b> <br>
+		Your article <b>"The joys and dangers of exploring Africa"</b> has been viewed <b>140 times</b>. That's <b>36</b> views more than yesterday!
+        </div>
+        <div class="page-header"></div>
+        
+        <!-- Here starts the draggable widgets -->
+       
+              <div class="row">
+	        <div id="demo-1" class="gridster ready">
+			    <ul style=" position: relative;margin:0 auto;">
+			    	<li data-row="1" data-col="1" data-sizex="3" data-sizey="3" class="box1" style="height:316px;margin-top:3px"></li>
+				    <li data-row="1" data-col="3" data-sizex="3" data-sizey="3" class="box2"></li>
+				    <li data-row="2" data-col="1" data-sizex="3" data-sizey="3" class="box3"></li>
+				    <li data-row="3" data-col="1" data-sizex="6" data-sizey="4" class="box4" ></li>
+			        <li data-row="2" data-col="2" data-sizex="3" data-sizey="3" class="box5"></li> <!--data-sizex should be 4-->
+			     </ul>
+			  </div>
+        </div>
+       
+        </div>
+        <!-- Right column -->
+        <div class="col-sm-3 col-md-2 sidebarRight navright">
+          <div class="mainMenuRight">
+          	
+          	<p class="navRightTitles titles">Account</p>
+          	<hr>
+          </div>
+          <ul class="nav nav-sidebar settings">
+     
+            <li><a href="#">Profile Settings</a></li>
+            <li><a href="index.html">Log-out</a></li>
+            
+          </ul>
+          
+          <!-- personal network -->
+          <div class="personalNetwork">
+          	<p class="navRightTitles titles">Personal Network</p>
+          	<hr>
+          	
+          </div>
+          <!-- chat -->
+          <ul class="nav nav-sidebar chat">
+		           <li>
+				          <div class="media">
+						  <div class="media-left">
+						      <img class="media-object" src="img/icons/chat/profile pics-01.png" alt="...">
+						  </div>
+						  <div class="media-body">
+						    <p class="media-heading">Martijn Berg</p>
+						    <p class="chatOver"> Company: AD <br> Email: mart@gmail.nl</p>
+						  </div>
+						 <div class="media-right chatOver">
+						      <img class="media-object" src="img/icons/nav/message.png" alt="...">
+						  </div>
+				          </div>
+		          </li>
+		           <li>
+				           	<div class="media">
+						  <div class="media-left">
+						      <img class="media-object" src="img/icons/chat/profile pics-02.png" alt="...">
+						  </div>
+						  <div class="media-body">
+						    <p class="media-heading">Kim Jansen</p>
+						    <p class="chatOver"> Company: Volkskrant <br> Email: kim_jan@ed.nl</p>
+						  </div>
+						 <div class="media-right chatOver">
+						    <a href="#">
+						      <img class="media-object" src="img/icons/nav/message.png" alt="...">
+						    </a>
+						  </div>
+				          </div>
+		          </li>
+		           <li>
+				           	<div class="media">
+						  <div class="media-left">
+						      <img class="media-object" src="img/icons/chat/profile pics-03.png" alt="...">
+						  </div>
+						  <div class="media-body">
+						    <p class="media-heading">Freek de Gouw</p>
+						    <p class="chatOver"> Company: AD <br> Email: freek@ed.nl</p>
+						  </div>
+						 <div class="media-right chatOver">
+						      <img class="media-object " src="img/icons/nav/message.png" alt="...">
+						  </div>
+				          </div>
+		          </li>
+		          
+		          	           <li>
+				           	<div class="media">
+						  <div class="media-left">
+						      <img class="media-object" src="img/icons/chat/profile pics-04.png" alt="...">
+						  </div>
+						  <div class="media-body">
+						    <p class="media-heading">Willem Knecht</p>
+						    <p class="chatOver"> Company: Volkskrant <br> Email: knect@hotmail.com</p>
+						  </div>
+						 <div class="media-right chatOver">
+						      <img class="media-object" src="img/icons/nav/message.png" alt="...">
+						  </div>
+				          </div>
+		          </li>
+		          
+		          	           <li class="test">
+				           	<div class="media">
+						  <div class="media-left">
+						      <img class="media-object" src="img/icons/chat/profile pics-05.png" alt="...">
+						  </div>
+						  <div class="media-body">
+						    <p class="media-heading">Tessa Bergmans</p>
+						    <p class="chatOver"> Company: Trouw <br> Email: tessa@gmail.com</p>
+						  </div>
+						 <div class="media-right chatOver">
+						      <img class="media-object" src="img/icons/nav/message.png" alt="...">
+						  </div>
+				          </div>
+		          </li>
+           
+          
+          </ul>
+        </div>
+       </div>
+     </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/gridster/jquery.gridster.js"></script><!-- for the draggable feature-->
+    <script src="js/navigation.js"></script>
+    <script type="text/javascript">
+      var gridster;
+
+      $(function(){
+        gridster = $(".gridster ul").gridster({
+          widget_base_dimensions: [100, 100],
+          widget_margins: [5, 5],
+          helper: 'clone',
+          
+        }).data('gridster');
+        
+       });
+        
+      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,799 @@
+<!-- TODO: 
+	modules page
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Modules for the future journalists ">
+    <meta name="author" content="Javier Trujillo">
+
+    <title>Scribe</title>
+<link rel="icon" 
+      type="image/png" 
+      href="img/favicon.png">
+    <!-- Bootstrap core CSS -->
+     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/bootstrap/dashboard.css" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="css/gridster/jquery.gridster.css">
+    <link rel="stylesheet" type="text/css" href="css/gridster/demo.css">
+  	<link rel="stylesheet" type="text/css" href="css/gridster/homepage.css" >
+  	
+  	<link href="css/personalPage/commonNavigation.css" rel="stylesheet">
+  	<link href="css/personalPage/storyEditor.css" rel="stylesheet">
+   <style>
+   a,a:visited,a:hover,a:active,a:link{
+	text-decoration:none;
+	color:inherit;
+   }
+   /* top images */
+   #hamburger:hover{
+   	 cursor:pointer;
+   }
+   #iconScribe{
+   	height:56px;position:relative;left:20%;
+   }
+   
+   /* Style for the most left navigation: class "navigat" */
+   	.navigat{
+   		padding-left: 0;
+	    margin-bottom: 0;
+	    list-style: none;
+   	}
+   	.navigat li{
+   		 position: relative;
+ 		 display: block;
+   	}
+   	.navigat li:hover{
+   		background:#1d2933;
+   	}
+   	.navleft .navigat>li>a {
+	  padding: 10px 15px;
+	  color: #ecf0f1;
+	  position: relative;
+	  display: block;
+}
+.navleft .navigat>li>a>img {
+  position: relative;
+  top: -2px;
+  margin-right: 20px;
+}
+.navigat li,.navigat a:hover{
+	cursor:pointer;
+	color:inherit;
+}
+
+    /*class for the modules items */
+    .modulesNav{
+    	  width: 90%;
+		  position: relative;
+		  left: 6%;
+    	  border-bottom:1px solid white;
+    	  border-top:1px solid white;
+    }
+    .modulesNav li{
+    	position:relative;
+    	display:block;
+    	padding: 10px 15px;
+        color: #ecf0f1;
+    }
+    
+    .shareNav{
+    	  width: 90%;
+		  position: relative;
+		  left: 6%;
+    	  border-bottom:1px solid white;
+    	  border-top:1px solid white;
+    }
+    .shareNav li{
+    	position:relative;
+    	display:block;
+    	padding: 10px 15px;
+        color: #ecf0f1;
+    }
+    .shareContent img{
+    	border-radius:50%;
+    }
+    #shareButton{
+    	float:right;
+    }
+    .newShareButton{
+    	background-color:#bec3c7;
+    	color:black;
+    }
+    /***************second left Navigation column ***********************/
+    .secondLeftNav{
+    	left:12.8%;
+    	background-color:#ecf0f1;
+    	width:22%;
+    }
+   	
+   	.well{
+   		background-color:white;
+   	}
+   	
+   	/* Map MODULE CONTENT*/
+   	 #googleMap{
+   	width:100%;height:300px;
+   }
+   
+   
+   	
+   	/* Impact Prediction MODULE CONTENT */
+   	#score{
+   		text-align:center;
+   		color:green;
+   		font-size:20px;
+   	}
+   	.impactWords{
+   		color:red;
+   	}
+   	
+   	.recommendedTags button{
+   		margin-bottom:5px;
+   	}
+   	
+   	.networkNoBorder{
+   		border:2px solid white;
+   	}
+   	.networkBorder{
+   		border:2px solid red;
+   	}
+   	/* article main content */
+   	.miniNav{position:relative;left:5%;}
+   	.miniNav a{
+    	text-decoration:underline;
+    }
+    
+    .j{
+    	position:relative;
+    	right:0;
+    	top:0;
+    	
+    }
+    .annotation{
+    	background:url('img/storyeditor/editorTool/annotation.png') no-repeat center;
+    	position:absolute;
+    	height:90px;
+    	width:240px;
+    	right:1%;
+    	top:29%;
+    	z-index: 30;
+    }
+    .annotation2{
+    	background:url('img/storyeditor/editorTool/annotation.png') no-repeat center;
+    	position:absolute;
+    	height:90px;
+    	width:240px;
+    	right:-47%;
+    	z-index: 30;
+    }
+    
+    .annotation2 button{
+    	position:relative;
+    	left:75%;
+    	top:8%;
+    	background-color:white;
+    	color:#E94C3D;
+    	padding:3px;
+    	padding-right:5px;
+    	padding-left:5px;
+    }
+    .annotation button{
+    	position:relative;
+    	left:75%;
+    	top:8%;
+    	background-color:white;
+    	color:#E94C3D;
+    	padding:3px;
+    	padding-right:5px;
+    	padding-left:5px;
+    }
+    
+    /*------- ARTICLE ----------*/
+    /* article page style */
+   	.articleContentDiv{
+   		left:33.5%;
+   		background-color: inherit;
+   	}
+   	
+    .articlePage{
+    	position:relative;
+    	top:30px;
+    	padding:30px;
+    	padding-top:16px;
+    	margin-left: auto;
+	    margin-right: auto;
+	    width: 60%;
+	    background-color: white;
+    }
+    
+    .articleTitle h2{
+    	font-size:26px;
+    }
+   	.articlePage>button{
+   		float:right;
+   	}
+   	
+    .articleImage{
+    	height:300px;
+    	margin-top: 10px;
+    	margin-bottom:20px;
+    }
+    .articleImageBack1:hover{
+    	background:url('img/storyeditor/editorTool/photo1transparant.png') no-repeat center;
+    }
+    /*.articleImage img{
+    	float:right; /* still clickable 
+    }*/
+    
+    .articleImageBack1{
+    	  background:url('img/storyeditor/editorTool/photo1.png') no-repeat center;
+    }
+    .articleImageBack2{
+    	  background:url('img/storyeditor/editorTool/photo2.png') no-repeat center;
+    }
+
+	/* PUBLISH   */
+	.impactCircle{
+		border-radius: 50%;
+		width: 100px;
+	    height: 100px;
+	    background:#e94c3d;
+	    color:white;
+	    position:relative;
+	    top:10px;
+	}
+	.impactCircle p{
+	  position: relative;
+	  top: 35px;
+	  left: 30px;
+	  font-size: 25px;
+	}
+	.checkers >div{
+		display:inline-block;
+	}
+	.checkers button{
+		height:35px;
+		width:35px;
+		margin-right:15px;
+		margin-bottom:5px;
+		position:relative;
+		top:4px;
+		border-radius: 0;
+		background-color:white;
+		color:red;
+	}
+	.checkIt{
+		/*width:50%;*/
+		
+	}
+	.middleButtons{
+		width:50%;
+		margin: 0 auto;
+	}
+	.middleButtons button{
+		width:200px;
+	}
+	
+	.logosPublished img{
+		position:relative;
+		bottom:10px;
+		
+	}
+	
+	.lastPublish{
+		padding:50px;
+	}
+   </style>
+  </head>
+  <body>
+ <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header leftCorner">
+          <img id="hamburgerRightNav" src="img/icons/nav/hamburgermenu.png"/>
+          <a href="homepage.html">
+          <img id="logoScribe"  src="img/icons/logo.png" />
+          </a>  
+         </div>
+          <div class="rightCorner">
+          	<img id="messageIcon" src="img/icons/nav/mail.png" />
+          	<span class="name">Jimmy Miller</span>
+          	<img id="arrowRightNav" src="img/icons/arrows up.png"/>
+          	<img src="img/icons/chat/profile-07.png" />
+          </div>
+        </div>   
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+      	<!-- most left navigation: it has a position fixed -->
+        <div class="col-sm-3 col-md-2 sidebar">
+          <div class="navleft">
+          <div class="mainMenu">
+          	<p style="color:white">Story Editor</p>
+          	<hr style="border-color:white">
+          </div>
+          <ul class="navigat nav-sidebar"> <!--NAV es el problema-->
+            
+            <li ><a href="#"><img src="img/storyeditor/editorTool/arrownavigation.png"/>Components</a></li>
+            <li><a href="#"><img src="img/storyeditor/editorTool/arrownavigation.png"/>Layout</a></li>
+            <li id="module"><a href="#"><img src="img/storyeditor/editorTool/arrowdown.png"/>Modules</a></li>
+            <!-- something here -->
+            	<div class="modulesNav">
+            		<li> <a id="geoModule" href="#"><img id="geoImg" src="img/storyeditor/editorTool/square.png">Geotagging</a></li>
+            		<li> <a id="impactModule" href="#"><img id="impactImg"src="img/storyeditor/editorTool/square.png">Impact prediction</a></li>
+            		<li> <a href="#"><img src="img/storyeditor/editorTool/square.png">Smart tags</a></li>
+            		<li> <a href="#"><img src="img/storyeditor/editorTool/square.png">Citations</a></li>
+            	</div>
+            <li><a href="#"><img src="img/storyeditor/editorTool/arrownavigation.png"/>Preview</a></li>
+            <li id="share"><a href="#"><img src="img/storyeditor/editorTool/arrownavigation.png"/>Share</a></li>
+            	<div class="shareNav hidden">
+            		<li> <a id="personalNetModule" href="#"><img  src="img/storyeditor/editorTool/square.png">Personal Network</a></li>
+            		<li> <a href="#"><img class="hid" src="img/storyeditor/editorTool/square.png">Email</a></li>
+            	</div>
+            <li><a href="#"><img src="img/storyeditor/editorTool/arrownavigation.png"/>Import</a></li>
+            <li><a href="#"><img src="img/storyeditor/editorTool/arrownavigation.png"/>Export</a></li>
+            
+          </ul>
+        </div>
+        </div>
+        <!-- second left navigation.It also has a position:fixed-->
+        <div class="col-md-2 sidebar secondLeftNav">
+        	
+        	
+        	<!--GEOLOCATION MODULE -->
+        	<div class="geoContent">
+        		<div class="mainMenu">
+        		<p> Geotagging</p>
+        		<hr>
+        		</div>
+        		<p> Recommended tags</p>
+        		<div class="well recommendedTags">
+        			<button class="btn" >Angola &nbsp; <span class="glyphicon glyphicon-remove"></span></button> 
+        			<button class="btn" >Botswana &nbsp; <span class="glyphicon glyphicon-remove"></span></button> 
+        			<button class="btn" >Zambia &nbsp; <span class="glyphicon glyphicon-remove"></span></button> 
+        		</div>
+        		<br>
+        		<p> Please fill in new location</p>
+        		<input id="pac-input" class="controls" type="text" placeholder="Start typing here">
+				<div id="googleMap" style=" "></div>
+				<button class="btn" style="float: right" id="addNewLocation">tag location</button>
+        	</div>
+        
+        <!-- PREDICTION MODULE-->
+        	<div class="predictionContent hidden">
+        		<div class="mainMenu">
+        		<p> Impact prediction</p>
+        		<hr>
+        		</div>
+        	
+        		<p> Original title</p>
+        		<div class="well">
+        			The <span class="impactWords">joys </span>and <span class="impactWords">dangers</span> of exploring Africa
+        		</div>
+        		<br>
+        		<p> Recomended words</p>
+        		<div class="well recommendedWords">
+        			<span class="impactWords">joys</span><br>
+        			<a wordNumber="1">wonders</a>, cheers,pleasures <br><br>
+        			<span class="impactWords">dangers</span> <br>
+        			<a wordNumber="2">risks</a>,hazards,threaths <br><br>
+        			<span class="impactWords">explorings</span> <br>
+        			<a wordNumber="3">discovering</a>,delving into
+        		</div>
+        		<br>
+        		<p> New title </p>
+        		<div class="well newTitle">
+        			The <span id="word1">joys</span> and <span id="word2">dangers</span> of <span id="word3">exploring</span> Africa.
+        		</div>
+        		<button class="btn" style="float: right" id="addNewTitle">Add to story</button>
+        		<br><br>
+        		<p> Score </p>
+        		<div id="score" class="well">
+        			<span >40</span> %
+        		</div>
+        	</div>
+        
+        <!------------------ SHARE OPTION ------------------------------------->
+        <div class="shareContent hidden">
+        	<div class="mainMenu">
+        		<p style="color:black"> Share </p>
+        		<hr>
+        		</div>
+        	<p> Share with your personal network</p>
+        	<form class="form-inline">
+			  <div class="form-group">
+			    <div class="input-group">
+			      <input type="text" class="form-control"  placeholder="Search">
+			      <div class="input-group-addon"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></div>
+			     <!-- <div class="input-group-addon"><span style="background: url('img/icons/nav/search thingy.png')  no-repeat center; "></span></div> -->
+			    </div>
+			  </div>
+			  </form>
+			  <br>
+			  <div class="well">
+			  	<div class="row placeholders">
+	            <div class="col-md-4 placeholder">
+	              <a href="">
+	              <img src="img/icons/chat/profile pics-02.png" class="img-responsive" alt="Generic placeholder thumbnail">
+	              </a>
+	              <p>Kim</p>
+			  	</div>
+			  	 <div class="col-md-4 placeholder">
+	              <a href="">
+	              <img src="img/icons/chat/profile pics-03.png" class="img-responsive" alt="Generic placeholder thumbnail">
+	              </a>
+	              <p>Freek</p>
+			  	</div>
+			  	 <div class="col-md-4 placeholder">
+	              <a href="">
+	              <img src="img/icons/chat/profile pics-04.png" class="img-responsive" alt="Generic placeholder thumbnail">
+	              </a>
+	              <p>Willem</p>
+			  	</div>
+			  	 <div class="col-md-4 placeholder">
+	              <a href="">
+	              <img src="img/icons/chat/profile pics-05.png" class="img-responsive" alt="Generic placeholder thumbnail">
+	              </a>
+	              <p>Jessica</p>
+			  	</div>
+			  	<div class="col-md-4 placeholder">
+	              <a href="">
+	              <img src="img/icons/chat/profile pics-06.png" class="img-responsive" alt="Generic placeholder thumbnail">
+	              </a>
+	              <p>Tessa</p>
+			  	</div>
+			  	<div class="col-md-4 placeholder">
+	              <a href="">
+	              <img src="img/icons/chat/profile pics-01.png" class="img-responsive" alt="Generic placeholder thumbnail">
+	              </a>
+	              <p>Martijn</p>
+			  	</div>
+			  </div>
+			  </div>
+			  <br>
+			  <div>
+			  	<button id="shareButton" class="btn" >Share</button>
+			  </div>
+        </div>
+        <!------------------END: SHARE OPTION ---------------------------------->
+        </div><!-- End second column -->
+        
+        <!---------------------- MODAL FOR THE PINBOARD ------------------------>
+        
+        
+        <div class="modal fade" id="modalPinboard">
+  <div class="modal-dialog modal-lg">
+    <div id="modal1" class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Pinboard</h4>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+        	<div class="row borders">
+        		<div class="col-md-4">
+        			 <a href="">
+				           <img id="pinboardImg" src="img/storyeditor/editorTool/pinboard/africa.png" class="img-responsive" alt="Generic placeholder thumbnail">
+				      </a>
+        		</div>
+        		<div class="col-md-4">
+        			 <a href="">
+				           <img src="img/storyeditor/editorTool/pinboard/food.png" class="img-responsive" alt="Generic placeholder thumbnail">
+				      </a>
+        		</div>
+        		<div class="col-md-4">
+        			 <a href="">
+				           <img src="img/storyeditor/editorTool/pinboard/interview.png" class="img-responsive" alt="Generic placeholder thumbnail">
+				      </a>
+        		</div>
+        	</div>
+        </div>
+      </div>
+    </div><!-- /.modal-content -->
+    
+    
+       <div id="modal2" class="modal-content hidden">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Pinboard</h4>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+        	<div class="row placeholders">
+        		<div class="col-md-4 placeholder" id="pinboardNewImage">
+        			 <a href="">
+				           <img id="newArticleImage" src="img/storyeditor/editorTool/pinboard/pinboardimage1.png" class="img-responsive" alt="Generic placeholder thumbnail">
+				      </a>
+        		</div>
+        		<div class="col-md-4 placeholder">
+        			 <a href="">
+				           <img src="img/storyeditor/editorTool/pinboard/pinboardimage2.png" class="img-responsive" alt="Generic placeholder thumbnail">
+				      </a>
+        		</div>
+        		<div class="col-md-4 placeholder">
+        			 <a href="">
+				           <img src="img/storyeditor/editorTool/pinboard/pinboardimage3.png" class="img-responsive" alt="Generic placeholder thumbnail">
+				      </a>
+        		</div>
+        		<div class="col-md-4 placeholder">
+        			 <a href="">
+				           <img src="img/storyeditor/editorTool/pinboard/pinboardimage4.png" class="img-responsive" alt="Generic placeholder thumbnail">
+				      </a>
+        		</div>
+        		<div class="col-md-4 placeholder">
+        			 <a href="">
+				           <img src="img/storyeditor/editorTool/pinboard/pinboardimage5.png" class="img-responsive" alt="Generic placeholder thumbnail">
+				      </a>
+        		</div>
+        		<div class="col-md-4 placeholder">
+        			 <a href="">
+				           <img src="img/storyeditor/editorTool/pinboard/pinboardimage6.png" class="img-responsive" alt="Generic placeholder thumbnail">
+				      </a>
+        		</div>
+        	</div>
+        </div>
+      </div>
+    </div><!-- /.modal-content -->
+    
+    
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+        
+        
+        
+        
+        <!---------------------END:MODAL FOR THE PINBOARD ---------------------->
+       
+        <!---------------------MODAL FOR PUBLISHING -------------------------->
+		 <div class="modal fade" id="modalPublish">
+		  <div class="modal-dialog modal-lg">
+		    <div id="modalPublishContent1" class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title">Publish review</h4>
+		      </div>
+		      <div class="modal-body">
+		        <div class="container-fluid" style="padding:30px;">
+		        	<div class="row">
+		        		<div class="col-md-4">
+		        			 <h4>Author</h4>
+		        			 <img src="img/icons/chat/profile-07.png" class="img-responsive" alt="Generic placeholder thumbnail">
+				             <p style="  position: absolute;left: 96px;top: 50px;"> Jimmy Miller</p>
+				             
+				             <br>
+				             
+				              <p>Co-author</p>
+				              <img src="img/icons/chat/profile pics-02.png" class="img-responsive" alt="Generic placeholder thumbnail">
+				              <p style="  position: absolute;left: 96px;top: 155px;"> Kim Jansen</p>
+				              <br>
+				              <p>Add new co-author</p>
+				              <form class="form-inline">
+							  <div class="form-group">
+							    <div class="input-group">
+							      <input type="text" class="form-control"  placeholder="type name">
+							      <div class="input-group-addon"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></div>
+							     <!-- <div class="input-group-addon"><span style="background: url('img/icons/nav/search thingy.png')  no-repeat center; "></span></div> -->
+							    </div>
+							  </div>
+							  </form>
+				             
+				             <br>
+				             <br>
+		        		  <h4> Title Impact</h4>
+		        			<div class="impactCircle">
+		        				<p id="scoreCircle">80%</p>
+		        			</div>
+		        			
+		        		</div>
+		        		
+		        		
+		        		<div class="col-md-4">
+		        			 <h4>Location tags (recommended)</h4>
+		        			 <div class="checkers row">
+		        			 	<div class="col-md-6">
+		        			 	<div class="checkIt"><button class="btn"></button>Angola</div>
+		        			 	<div class="checkIt"><button class="btn"></button>Kenya</div>
+		        			 	</div>
+		        			 	
+		        			 	<div class="col-md-6">
+		        			 	<div class="checkIt"><button class="btn"></button>Zambia</div>
+		        			 	<div class="checkIt"><button class="btn"></button>Sudan</div>
+		        			 	</div>
+		        			 </div>
+		        			 <br>
+		        			 
+		        			 
+		        			 <p>Add new location tags</p>
+				              <form class="form-inline">
+							  <div class="form-group">
+							    <div class="input-group">
+							      <input type="text" class="form-control"  placeholder="add location">
+							      <div class="input-group-addon"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></div>
+							     <!-- <div class="input-group-addon"><span style="background: url('img/icons/nav/search thingy.png')  no-repeat center; "></span></div> -->
+							    </div>
+							  </div>
+							  </form>
+							  
+		        			<br>
+		        			
+		        			 <h4>Story tags (recommended)</h4>
+		        			  <div class="checkers row">
+		        			  	<div class="col-md-6">
+		        			 	<div class="checkIt"> <button class="btn">X</button>Africa</div>
+		        			 	<div class="checkIt"> <button class="btn">X</button>Nature</div>
+		        			 	<div class="checkIt"> <button class="btn">X</button>Explore</div>
+		        			 	</div>
+		        			 	<div class="col-md-6">
+		        			 	<div class="checkIt"> <button class="btn">X</button>Travel</div>
+		        			 	<div class="checkIt"> <button class="btn">X</button>Animal</div>
+		        			 	<div class="checkIt"> <button class="btn"></button>Places</div>
+		        			 	</div>
+		        			 </div>
+		        			 <br>
+		        			 <p>Add new story tags</p>
+				              <form class="form-inline">
+							  <div class="form-group">
+							    <div class="input-group">
+							      <input type="text" class="form-control"  placeholder="add story">
+							      <div class="input-group-addon"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></div>
+							     <!-- <div class="input-group-addon"><span style="background: url('img/icons/nav/search thingy.png')  no-repeat center; "></span></div> -->
+							    </div>
+							  </div>
+							  </form>
+							 
+		        			<br>
+		        		</div>
+		        		<div class="col-md-4 mich" style="padding-left:8%">
+		        			<h4>Template</h4>
+		        			 <div class="checkers row">
+		        			 	<div class="col-md-6">
+		        			 	<div class="checkIt"> <button class="btn">X</button>Yes</div>
+		        			 	</div>
+		        			 	<div class="col-md-6">
+		        			 	<div class="checkIt"> <button class="btn"></button>No</div>
+		        			 	</div>
+		        			 </div>
+		        			<br>
+		        			 <p>
+		        			 	save as:
+		        			 </p>
+		        			 <form class="form-inline">
+							  <div class="form-group">
+							    <div class="input-group">
+							      <input type="text" class="form-control"  placeholder="type template name">
+							      <div class="input-group-addon"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></div>
+							     <!-- <div class="input-group-addon"><span style="background: url('img/icons/nav/search thingy.png')  no-repeat center; "></span></div> -->
+							    </div>
+							  </div>
+							  </form>
+		        		</div>
+		        		
+		        	</div>
+		        	<br><br>
+		        	<div class="row">
+		        		<div class="middleButtons">
+		        			<button style="background-color:#1d2933" class="btn btn-lg cancelPublish">Cancel</button>
+		        			<button id="publishOk" class="btn btn-lg">Publish story</button>
+		        		</div>
+		        	</div>
+		        </div>
+		      </div>
+		    </div><!-- /.modal-content -->
+		    
+		  <div id="modalPublishContent2" class="modal-content hidden">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title">Publish</h4>
+	      </div>
+	      <div class="modal-body">
+	        <div class="container-fluid">
+	        	<div class="lastPublish">
+		        	Your story "<span>The joys and dangers of exploring Africa</span>" has been sent to the following publishers:
+		        	<br><br>
+		        	<ul class="logosPublished">
+		        		<li><img style="margin-right: 4px" src="img/storyeditor/editorTool/volkskrant picture-14.png"/> De Volkskrant</li>
+		        		<li><img src="img/storyeditor/editorTool/AD picture-15.png"/> Het Algemeen Dagblad</li>
+		        		
+		        	</ul>
+		        	
+		        	</div>
+		        	<div class="middleButtons">
+			        		<button id="backEditor" style="background-color:#1d2933;" class="btn btn-lg">Back to editor</button>
+			        		<a href="homepage.html"><button id="backHome" class="btn btn-lg">Back to home</button></a>
+			        </div>
+			       
+	        </div>
+	      </div>
+	    </div><!-- /.modal-content -->
+       </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+        
+        <!--------------------END:MODAL FOR PUBLISHING ------------------------>
+        <!-- MAIN ARTICLE -->
+        <!-- we add two new columns because the other ones have position fixed -->
+        <div class="col-md-8 sidebar articleContentDiv ">
+        	<div class="row miniNav titles">
+				<a href="homepage.html">Home  </a> &nbsp;&nbsp; >  &nbsp; &nbsp;<a href="StoryEditor.html">Draft</a> &nbsp; &nbsp; >  &nbsp; &nbsp;<a>Story Editor: The joys and dangers of exploring Africa</a>
+			</div>
+			
+			<!--------------------annotation ------------>
+			<!-- <div class="annotation">
+				<button class="btn">solve</button>
+			</div> -->
+			<!--------------------annotation ------------>
+			
+        	<div class="articlePage">
+        		<button class="btn" style="float: right" data-toggle="modal" data-target="#modalPublish">Publish story</button><br>
+        		<div class="articleTitle"> 
+        			<h2> The Joys and Dangers of Exploring Africa</h2>
+        			<p>Renowned travel writer Paul Theroux journeys through Botswana's spectacular,wildlife-rich wetlands</p>
+        		</div>
+        		<div class="articleImage articleImageBack1">
+        			<div class="j">
+        			<img tabindex="0" placement="left" data-toggle="popover" title="Kim says " data-content="I think you should change the front picture."  src="img/storyeditor/editorTool/annotationsprofile.png" />
+        			
+			</div>
+        		
+        			
+        			
+        			<div class="pinMenu hidden">
+        				<br>
+        				<p style="text-align: center;margin-bottom:20px">Change image</p>
+        				
+        				<div class="container-fluid">
+	        				<div class="row">
+	        					<div class="col-md-6" data-toggle="modal" data-target="#modalPinboard">
+	        						<button class="btn">From pinboard</button>
+	        					</div>
+	        					<div class="col-md-6">
+	        						<button class="btn">From computer</button>
+	        					</div>
+	        				</div>
+	        		</div>
+        			</div>
+        		</div>
+        		<div class="articleBody">
+        		After miles of gravel and some upright spinning funnels of dust devils and the light brown scrub of the bush, and the immensity of woodland and camel thorns—after all that thirst, the Okavango Delta is unexpectedly drenched, as the desert deliquesces into a watery mirage, a deep green marvel that bubbles up and sprawls over the left shoulder of Botswana as a succession of swamps. Most river deltas occur at the edge of a landmass, widening and dumping soil and water, enlarging the shore, pouring the current into a body of water. The Okavango is unusual in being landlocked; the stream of the river, fed by numerous watercourses draining from a catchment area in the planalto of Angola, the wooded highlands of the far north, becomes a delta hundreds of miles wide. This river—lush and sodden and silted—empties all its flow into the middle of the Kalahari Desert. The precise and pretty name for this natural wonder of watery interstices and spreading rivulets is an alluvial fan.
+				<hr>
+				The result of the sprawling torrent of water are channels and flood zones and lagoons and islands of palms, and water so clean from percolating through the papyrus beds that it is drinkable. Also present are seasonal swamps, and wide trenches called fossil rivers that once carried water, and ephemeral rivers, and permanent rivers: It is a water world. This fertile deep green habitat for animals and birds and flowers, one of the glories of Africa, is without traditional villages—the Tswana people live almost entirely on the perimeter, entering the delta only to fish or hunt.
+				<hr>
+				In Africa, animals—large and small—are found at water holes. The Okavango Delta, teeming with wildlife, and still pristine, is one of the great water holes of the continent.In a channel of the Okavango Delta there was a luxury camp for visitors to ride elephants across the mushy ground, and through the tall grass and the swamps, to look at birds and big animals. Few others in Africa rode elephants. At Abu Camp (“Meet your inner elephant”) all they rode were
+				
+				</div>
+        	
+        	
+        	</div> <!--close article page -->
+        	
+        </div>
+       
+      </div> 
+    </div>
+    
+    
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/gridster/jquery.gridster.js"></script><!-- for the draggable feature-->
+    
+    <!-- Geolocation module -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+    <script src="js/personalPage/editortool/geocode.js"></script>
+    <!-- Script for some basic features -->
+    <script src="js/personalPage/editortool/storyeditortool.js"></script>
+    
+    <script>
+    	$(document).ready(function(){
+    		$('[data-toggle="popover"]').popover(
+    			{}
+    		);
+    	});
+    </script>
+  </body>
+</html>

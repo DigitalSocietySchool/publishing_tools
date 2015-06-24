@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<link rel="icon" 
+      type="image/png" 
+      href="img/favicon.png">
+<head>
+	 <title>Scribe</title>
+	 <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+<style>
+body  {
+	color:#6e6e6e;
+    background-image: url("img/login-02j.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-color: #cccccc;
+}
+
+
+.formcontainer{
+	/* for border: http://stackoverflow.com/questions/4062001/css3-border-opacity */
+	border: 1px solid rgb(0, 0, 0); 
+    border: 1px solid #848484;
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+	position:absolute;
+	bottom:10%;
+	left:37%;
+	width:25%;
+	background:rgba(255,255,255,0.8);
+	padding:40px;
+}
+
+
+
+.headerLogin{
+	text-align: center;
+	position:relative;
+	margin-top: -20px;
+}
+
+.aRegister{
+	 text-decoration: underline;
+	 color: #525252;
+	 position:relative;
+	 top:10px;
+}
+</style>
+</head>
+<body>
+
+<div class="container-fluid">
+
+	<div class="formcontainer">
+      <form action="homepage.html" method="post">
+      	<h3 class="headerLogin">Member login</h3>
+		  <div class="form-group">
+		    <label for="exampleInputEmail1">Username</label>
+		    <input  class="form-control" id="exampleInputEmail1" >
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputPassword1">Password</label>
+		    <input type="password" class="form-control" id="exampleInputPassword1">
+		  </div>
+		  <div class"container">
+		  <div class="col-sm-7">
+		  	<a href="#" class="aRegister">Register</a>
+		  </div>
+		  <div class="col-sm-2 ">
+		  	<button type="submit" class="btn btn-danger">&nbsp;&nbsp;&nbsp;&nbsp;Login&nbsp;&nbsp;&nbsp;&nbsp;</button>
+		  </div>
+		  </div>
+		</form>
+	 </div>
+    </div>
+</body>
+</html>

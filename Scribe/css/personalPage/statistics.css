@@ -1,0 +1,91 @@
+/*+++++++++++Style for the statistics page +++++++++++++*/
+.panel-heading{
+	border-bottom:0;
+}
+
+#listTitles{
+	height:200px;
+	overflow-y:auto;
+	margin-top:15px;
+}
+
+/**********style for the scrollbar of the list of titles **********************/
+
+/* Let's get this party started */
+.panel-body ::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+/* Track */
+.panel-body  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+.panel-body  ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255,0,0,0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+.panel-body ::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(255,0,0,0.4); 
+}
+
+/*******END: style for the scrollbar of the list of titles **********************/
+
+.titleSelected{
+	background:#e94c3d;
+}
+
+/**** style for the button that allows you create more statistics****/
+#addStatistics{
+	background:url('../../img/statistics/statistics.png') no-repeat center;
+	width:210px;
+	height:55px;
+	margin-bottom:7%;
+	margin-top:1%;
+}
+#addStatistics:hover{
+	cursor:pointer;
+	opacity: 0.8;
+}
+
+
+
+/*************** style for the boxes which contain the statistics selected *****/
+
+.statisticsDisplayed .panel-body{
+	height:279.4px ;
+}
+
+#statistic2{
+	background:url("../../img/statistics/statistics (1).png") no-repeat center;
+}
+
+#statistic1{
+	background:url("../../img/statistics/statistics2.png") no-repeat center;
+}
+
+@media(min-width: 1900px) { 
+	#statistic2{
+		background:url("../../img/statistics/statistics1big.png") no-repeat center;
+	}
+	
+	#statistic1{
+		background:url("../../img/statistics/statistics2big.png") no-repeat center;
+	}
+}
+
+
+@media(max-width: 1280px) { 
+	#statistic2{
+		background:url("../../img/statistics/statistics1small.png") no-repeat center;
+	}
+	
+	#statistic1{
+		background:url("../../img/statistics/statistics2small.png") no-repeat center;
+	}
+}

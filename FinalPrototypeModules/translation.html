@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!-- upload only .txt files (not .pdf) -->
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Modules for the future journalists ">
+    <meta name="author" content="Javier Trujillo">
+
+    <title>Modules</title>
+
+     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" type="text/javascript"></script>
+        <link href="css/bootstrap/dashboard.css" rel="stylesheet">
+	
+	<style>
+  #logoScribe{
+	height:56px;
+	position:relative;
+	left:3%;
+}
+</style>
+<body>
+ 
+   <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+      	<a href="../Scribe/modules.html">
+          <img id="logoScribe"  src="img/icons/logo.png" />
+        </a> 
+       
+        
+        </div>
+    </nav>
+      <div class="container-fluid">
+    	<div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="" style="text-align: center"> Translation</a></li>
+          </ul>
+          <p style=" word-wrap: break-word;">Journalists will be able to translate their stories automatically, making their content available for as much people as possible</p>
+          <br>
+          <p style=" word-wrap: break-word;"><span class="quest">How we can implement it in our tool:</span><br>
+          	It should be integrated in the configuration of the editor. When the article is finished you can decide which languages you want your articles to be translated in.
+          	<br>
+          <p style=" word-wrap: break-word;"><span class="quest">What's the benefit for the journalist?</span><br>
+          By making their stories available in several languages, it extends the journalist’s audience. </p>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <div class="row">
+    		<div class="col-md-6">
+	    		<div class="container kv-main">
+	            <form enctype="multipart/form-data">
+	            	<h3>IBMcompany.doc</h3>
+	                <br>
+	            </form>
+			     </div>
+             </div>
+        </div>
+        <div class="row">
+    		<div class="col-md-6">
+    			<div class="btn-group" role="group" aria-label="...">
+				  <button type="button" id="translate" class="btn btn-default" aria-label="Left Align" style="left:700%">
+				  <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+				</button>
+				</div>
+    			  <div class="well">
+			      	<p id="original">
+			      		
+			      	</p></div>
+    		</div>
+    			
+    		<div class="col-md-6">
+    			<div class="btn-group" role="group" aria-label="...">
+				  <button type="button" id="toEnglish"  class="btn btn-default">English</button>
+				  <button type="button" id="toFrench" class="btn btn-default">French</button>
+				  <button type="button" id="toSpanish" class="btn btn-default">Spanish</button>
+				</div>
+			      <div class="well" id="translated">
+			      	<p id="english" class="hidden">
+			      		Technology company IBM is working on software that makes it possible to recognize emotions in text. It is intended that the software is being developed reports for spraak.Dat IBM opposite The Wall Street Journal.
+The company wants that big companies by the software can cut the cost of klantenservice.De software can be used to recognize basic emotions in automated online chat services, tweets or emails. IBM must separate programming software for these textual variants, as there are other emotions expressed worden.Bedrijven often put automated chat services like customer service. Such a service then uses a name that is similar to that of an existing person, whereas it is actually spoken with a robot. IBM indicates that the software adds an emotional analysis of this type of chats.
+"Our goal is to achieve at least as good as customer satisfaction achieved by human intervention" explains David Konopnicki. Konopnicki leads the project in the past year in Israel working on.
+			      		
+			      	</p>
+			      	<p id="french" class="hidden">
+			      		Société de technologie IBM travaille sur un logiciel qui permet de reconnaître les émotions dans le texte. Il est prévu que le logiciel est en cours d'élaboration des rapports pour spraak.Dat IBM en face du Wall Street Journal.
+La société veut que les grandes entreprises par le logiciel peuvent réduire le coût des logiciels klantenservice.De peut être utilisée pour reconnaître les émotions de base dans automatisés chat en ligne de services, tweets, ou e-mails. IBM doit séparer le logiciel de programmation pour ces variantes textuelles, car il ya d'autres émotions exprimées worden.Bedrijven souvent mis des services de clavardage automatisées comme service à la clientèle. Un tel service utilise alors un nom qui est semblable à celle d'une personne existante, alors il est effectivement prononcé avec un robot. IBM indique que le logiciel ajoute une analyse émotionnelle de ce type de discussions.
+«Notre objectif est d'atteindre au moins aussi bonne que la satisfaction du client atteint par l'intervention humaine», explique David Konopnicki. Konopnicki dirige le projet l'année dernière en Israël à travailler sur.
+			      		
+			      	</p>
+			      	<p id="spanish" class="hidden">
+			      		Empresa de tecnología IBM está trabajando en un software que hace posible el reconocimiento de las emociones en el texto. Se pretende que el software se está desarrollando informes para spraak.Dat IBM opuesta The Wall Street Journal.
+La compañía quiere que las grandes empresas de software pueden reducir el costo del software klantenservice.De se puede utilizar para reconocer las emociones básicas en automatizados de chat en línea de servicios, mensajes de twitter o correos electrónicos. IBM debe separar el software de programación para estas variantes textuales, ya que hay otras emociones expresadas worden.Bedrijven menudo ponen los servicios de chat automatizados como el servicio al cliente. Tal servicio, entonces utiliza un nombre que es similar a la de una persona existente, mientras que en realidad se habla con un robot. IBM indica que el software añade un análisis emocional de este tipo de chats.
+"Nuestro objetivo es alcanzar al menos tan buena como la satisfacción del cliente logrado por la intervención humana", explica David Konopnicki. Konopnicki lidera el proyecto en el último año en Israel trabajando.
+			      		
+			      	</p>
+			      	
+			      </div>
+			      
+			    </div>
+    		</div>
+    	  </div>
+    	 </div>
+    	</div>
+     
+    </div>	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    	$(document).ready(function(){
+    		$("#original").html("Technologiebedrijf IBM werkt aan software die het mogelijk maakt om emoties te herkennen in tekst. Het is de bedoeling dat de software verder ontwikkeld wordt voor spraak."+
+"Dat meldt IBM tegenover The Wall Street Journal. <br>Het bedrijf wil dat grote bedrijven door de software kunnen snijden in de kosten voor klantenservice."+
+"De software kan gebruikt worden om basisemoties te herkennen in geautomatiseerde online chatdiensten, tweets of e-mails. IBM moet de software apart programmeren voor deze tekstvarianten, aangezien er andere emoties geuit worden."+
+"Bedrijven zetten vaak geautomatiseerde chatdiensten in als klantenservice. Zo'n dienst gebruikt dan een naam die lijkt op die van een bestaand persoon, terwijl er eigenlijk met een robot gesproken wordt. IBM geeft aan dat de software een emotionele analyse toevoegt aan dit soort chats."+
+"<br>'Ons doel is om op z'n minst een even goede klanttevredenheid te bereiken als met menselijke tussenkomst behaald wordt' verklaart David Konopnicki. Konopnicki leidt het project dat er het afgelopen jaar in Israël aan werkte.");
+    		
+    		
+    		$("#translate").click(function(){
+    			$("#translated p").addClass("hidden");
+    			$("#english").removeClass("hidden");
+    			$(".btn").removeClass("active");
+    			$("#toEnglish").addClass("active");
+    		});
+    		$("#toEnglish").click(function(){
+    			$("#translated p").addClass("hidden");
+    			$("#english").removeClass("hidden");
+    			$(".btn").removeClass("active");
+    			$("#toEnglish").addClass("active");
+    		});
+    		$("#toSpanish").click(function(){
+    			$("#translated p").addClass("hidden");
+    			$("#spanish").removeClass("hidden");
+    			$(".btn").removeClass("active");
+    			$("#toSpanish").addClass("active");
+    		});
+    		$("#toFrench").click(function(){
+    			$("#translated p").addClass("hidden");
+    			$("#french").removeClass("hidden");
+    			$(".btn").removeClass("active");
+    			$("#toFrench").addClass("active");
+    		});
+    	    
+    	});
+    </script>
+  </body>
+</html>

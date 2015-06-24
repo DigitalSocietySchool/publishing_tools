@@ -1,0 +1,25 @@
+
+   	/*--------------------------------------------------------------*/
+   	/*Style for the center*/
+   	.page-header{
+   		border-bottom-color: #A4A6A8
+   	}
+   	/*Style for the headerInfo*/
+   	.resumeInfo{
+   		width: 50%;
+  	    margin: 0 auto;
+  	    
+   	}
+   	
+	.gridster ul{
+		background-color:inherit;
+	}
+    
+    /*content for each draggable box */
+    .box1{ content:''; background:url('../../img/homepage/messages (5).png') no-repeat center; }
+    .box2{ content:''; background:url('../../img/homepage/agenda2.png') no-repeat center; }
+    .box3{ content:''; background:url('../../img/homepage/twitterfeed.png') no-repeat center; }
+    .box4{ content:''; background:url('../../img/homepage/footage.png') no-repeat center; }
+    .box5{ content:''; background:url('../../img/homepage/statistics4 (1).png') no-repeat center; margin-bottom:1px; }
+    
+    

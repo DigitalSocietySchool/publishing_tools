@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Modules for the future journalists ">
+    <meta name="author" content="Javier Trujillo">
+
+    <title>Modules</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/bootstrap/dashboard.css" rel="stylesheet">
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope' rel='stylesheet' type='text/css'>
+</head>
+<style>
+	a, a:hover, a:active, a:visited {
+    text-decoration: none;
+}
+#container {
+    clear: both;
+    position: relative;
+    width: 1190px;
+    margin: 0 auto;
+}
+#worksheet {
+    position: relative;
+    width: 1124px;
+    height: 650px;
+    margin: 10px 0 0;
+}
+#addnotelink {
+    font-size: 14px;
+    color: #7F7E6E;
+    font-variant: small-caps;
+    font-weight: normal;
+    padding: 4px 20px;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+#addnotelink:hover {
+    color: #bebda5;
+}
+#notescontainer {
+    position: relative;
+    min-width: 754px;
+}
+.paper {
+    -webkit-border-radius: 40px 30px 40px 2px  / 1px 2px 6px 100px;
+    -moz-border-radius: 40px 30px 40px 2px  / 1px 2px 6px 100px;
+    border-radius: 40px 30px 40px 2px  / 1px 2px 6px 100px;
+    -webkit-box-shadow: 0px 2px 3px 1px #BBB; /* Saf3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 0px 2px 3px 1px #BBB; /* FF3.5 - 3.6 */
+    box-shadow: 0px 2px 3px 1px #BBB; /* Opera 10.5, IE9, FF4+, Chrome 6+, iOS 5 */
+    background-color: #FFFFFF;
+}
+.note {
+    position: absolute;
+    background-color: #FEFDDD;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 4px;
+    min-height: 120px;
+    min-width: 180px;
+    height: 160px;
+    width: 200px;
+    -webkit-border-radius: 20px 40px 20px 100px  / 1px 1px 3px 4px;
+    -moz-border-radius: 20px 40px 20px 100px  / 1px 1px 3px 4px;
+    border-radius: 20px 40px 20px 100px  / 1px 1px 3px 4px;
+    -webkit-box-shadow: 0px 5px 5px 3px #F0F0F0; /* Saf3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 0px 5px 5px 3px #F0F0F0; /* FF3.5 - 3.6 */
+    box-shadow: 0px 5px 5px 3px #F0F0F0; /* Opera 10.5, IE9, FF4+, Chrome 6+, iOS 5 */
+}
+.notebar {
+    cursor: pointer;
+    min-height: 24px;
+}
+.notebar a {
+    display: none;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    right: 6px;
+    text-align: right;
+    top: 0;
+    color: #7f7e6e;
+}
+.notebar a:hover {
+    color: #bebda5;
+}
+.notetext {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.notetext textarea {
+    width: 102%;
+    height: 100%;
+    resize: none;
+    margin: -2px 0 0 -2px;
+    padding: 0px 10px 5px;
+    background: inherit;
+    border: none;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* IE 8+ */
+    font-family: 'Annie Use Your Telescope', Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 1.6em;
+    color: #5f5e52;
+}
+
+#logoScribe{
+	height:56px;
+	position:relative;
+	left:3%;
+}
+</style>
+<body>
+ 
+   <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+      	<a href="../Scribe/modules.html">
+          <img id="logoScribe"  src="img/icons/logo.png" />
+        </a> 
+       
+        
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+    	<div class="row">
+         <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="" style="text-align: center"> Annotations</a></li>
+          </ul>
+          <p style=" word-wrap: break-word;">Via annotations, journalists from different disciplines can cooperate while writing an article. By using annotations similar to Google Docs, journalists can improve their article. </p>
+          <br>
+          <p style=" word-wrap: break-word;"><span class="quest">How we can implement it in our tool:</span><br>
+          	Within the editor mode, journalists will have the option to insert annotations to their own work, but with permission, also to the work of others. This can also be useful for the editorial office, to annotate the work that has been sent to them and show where some adaption might be needed. 
+          	<br>
+          <p style=" word-wrap: break-word;"><span class="quest">What's the benefit for the journalist?</span><br>
+By using annotations, the journalist can improve their own work, but can also learn from others by co-operating. 
+</p>
+        
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+<div id="container">
+    <div id="notescontainer">
+        <div>
+            <a id="addnotelink" class="paper">Add note</a>
+        </div>
+        <div id="worksheet" class="paper">
+ 			<h1>&nbsp;&nbsp;&nbsp;To do </h1>
+ 			<h1 style="position:relative;right:-40%;top:-9%">Doing </h1>
+ 			<h1 style="position:relative;right:-74%;top:-18%">Done</h1>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<script>
+	$(document).ready(function() {
+ 
+$('a#addnotelink').on('click', function() {
+	var date=new Date();
+    var note = $('<div></div>').addClass('note').appendTo('#worksheet'),
+        head = $('<div></div>').html("Steven &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + date.getHours()+":"+date.getMinutes()+ "&nbsp;"+date.getDay()+"/"+date.getMonth()+"/"+date.getFullYear()
+        ).addClass('notebar').appendTo(note),
+        removelink = $('<a></a>').attr('href','#').html('&times').appendTo(head),
+        notetext = $('<div></div>').addClass('notetext').html('<textarea></textarea>').appendTo(note);
+        // Resizable
+        $(note).resizable({
+            containment: '#worksheet',
+            delay: 0,
+            autoHide: false,
+            minHeight: 120,
+            minWidth: 180,
+            scroll: false
+        })
+        .draggable({
+            containment: '#worksheet',
+            stack: ".note",
+            handle: '.notebar',
+            opacity: 0.9,
+            scroll: false
+            });
+        $(note).hide().fadeIn(300).css('z-index', '1000');
+        return false;
+    });
+ 
+    // Remove note
+    $(".notebar a").live("click", function() {
+        var note = $(this).closest('.note');
+        note.fadeOut(300, function() {
+            note.remove();
+        });
+        return false;
+    });
+ 
+    $(".notetext textarea").live("blur", function() {
+        $(this).parent().prev().find('a').fadeOut(300);
+    });
+ 
+    $(".notetext textarea").live("focus", function() {
+        var $this = $(this);
+        $this.parent().prev().find('a').fadeIn(300);
+    });
+ 
+});
+</script>
+ </body>
+</html>

@@ -1,0 +1,255 @@
+body{
+	  background-color: #d8d8d8;
+	  font-family: Helvetica;
+	  font-size: 11pt;
+	  color:#1e1e1e;
+}
+
+.titles{
+	
+  	font-size:14pt;
+  	color:#000000;
+}
+
+.hid{
+	visibility:hidden;
+}
+
+a{
+	color:inherit;
+	text-decoration:none;
+}
+
+a,a:hover{
+	text-decoration:none;
+}
+
+
+img{
+    	border-radius:0;
+    }
+    
+.active,.nav-sidebar > .active > a{
+	background-color:#337291;
+}
+/* Style for the head navigation */
+.navbar-inverse {
+  background-color: #11191e;
+  border-color: #080808;
+}
+
+.leftCorner{
+	position:relative;
+	left:0;
+}
+#hamburgerRightNav{
+	width:40px;
+	height:40px;
+}
+#hamburgerRightNav:hover{
+	cursor:pointer;
+}
+
+#logoScribe{
+	height:56px;
+	position:relative;
+	left:5%;
+}
+.rightCorner{
+	position:absolute;
+	right:0;
+	margin-right:2%;
+}
+     
+.name{
+   	color:white;
+   	position: relative;
+    right: 10%;
+   }
+ #messageIcon{
+ 	position:relative;
+ 	right:33%; /*change according to the screen?*/
+ 	height:56px;
+ }
+ @media(max-width: 1280px) {  /*small screens (Macs probook) */
+	 	#messageIcon{
+	 	right:13%; /*change according to the screen?*/
+	 }
+ }
+  @media(min-width: 1900px) {  /* big screens (Imac)*/
+	 	#messageIcon{
+	 	right:55%; /*change according to the screen?*/
+	 }
+ }
+ 
+   #arrowRightNav:hover{
+   	cursor:pointer;
+   }
+  
+    
+   /******************* Style for the left navigation. It is meant to be in order from top to bottom *******************/
+   /* Style for the most left navigation: class "navigat" */
+   	.navigat{
+   		padding-left: 0;
+	    margin-bottom: 0;
+	    list-style: none;
+   	}
+   	.navigat>li{
+   		 position: relative;
+ 		 display: block;
+   	}
+   	.navigat>li:hover{
+   		background:#1d2933;
+   	}
+   	
+   	/* Second important class for the left navigation: "navleft" */
+   	.navleft .navigat>li>a {
+	  padding: 10px 15px;
+	  color: #ecf0f1;
+	  position: relative;
+	  display: block;
+    }
+	.navleft .navigat>li>a>img {
+	  position: relative;
+	  top: -2px;
+	  margin-right: 20px;
+	}
+
+ /*@media (max-width: 750px)*/
+    
+    .navleft{
+    	
+    }
+    
+    .mainMenu p{
+    	color:white;
+    	text-align:center;
+    	position:relative;
+    	top:10px;
+    }
+    
+    #arrowLeftNav{
+    	position:relative;
+    	bottom:20px;
+    	top:-10px;    	left:95%;
+    	height:30px;
+    	width:30px;
+    }
+    #arrowLeftNav:hover{
+    	cursor:pointer;
+    }
+    
+    
+   	.navleft .nav>li>a{
+   		padding:10px 15px;
+   		color:#ecf0f1;
+   	}
+   	.navleft .nav>li>a>img{
+   		margin-right: 20px;
+   	}
+   	
+   	.sidebar{
+   		background-color:#34495e;
+   		border:0;
+   	}
+   	
+   	
+   	/*.nav-sidebar > .active > a, .nav-sidebar > .active > a:hover, .nav-sidebar > .active > a:focus{
+   		background-color:#2A3F51;
+   	}*/
+   	
+   	
+
+    /*---------------------------------------------------------------*/
+    /*Style for the right nav*/
+	
+	.navRightTitles{ /*class for the titles: "account" and "personal network" */
+		text-align:center;
+    	position:relative;
+    	color:#A4A6A8;
+	}
+    .mainMenuRight p{
+    	top:15px;
+    }
+    
+    .settings li{
+    	text-align:center;
+    	border:1px solid rgba(128, 128, 128, 0.21);
+    }
+    .personalNetwork p{
+    	top:8px;
+    }
+    .personalNetwork .form-inline{
+    	margin-bottom:20px;
+    }
+    
+    
+    /*chat*/
+    .sidebarRight{
+		  position: fixed;
+		  top: 51px;
+		  bottom: 0;
+		  right:0;
+		  z-index: 1000;
+		  display: block;
+		  padding: 20px;
+		  overflow-x: hidden;
+		  overflow-y: auto;
+		  background-color: #f5f5f5;
+		  border-right: 1px solid #eee;
+		}
+    .chat>li{
+    	border:1px solid rgba(128, 128, 128, 0.21);
+    	padding-left:7%;
+    }
+    .chat>li>a{
+    	padding:15px 15px;
+    }
+    
+    .chat .media{
+    	  margin-top: 5px;
+ 		 margin-bottom: 5px;
+    }
+    .chat .media:hover{
+    	cursor:pointer;
+    }
+    .chat .media .chatOver{
+    	margin-bottom:0;
+    	font-size:11px;
+    }
+    .chatOver img{
+    	position:relative;
+    	top:10px;
+    	right:60%;
+   }
+   
+   .chatSelected{
+   	background-color: #34495e;
+   	color:white;
+   }
+   
+
+/*********************************************
+ *This is used by the pages: modules,storyeditor(draft),statistics and socialfeed (the ones which use panels)
+ *********************************************
+ */
+
+/*Style for the summary modules page */
+
+.miniNav a{
+    	text-decoration:underline;
+    }
+.miniNav.titles{
+	font-size:11pt;
+	color:#848484;
+}
+ 
+/*Main container panel */
+.panel-info{
+	 border:0;
+	 border-color: transparent;
+}
+.panel-info>.panel-heading {
+  color: white;
+  background-color: #337291;
+}

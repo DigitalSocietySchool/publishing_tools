@@ -1,0 +1,294 @@
+<html>
+	<!-- To add next to the camera a map with the location of the selected place -->
+	<head>
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+		 <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+		 <link href="css/bootstrap/dashboard.css" rel="stylesheet">
+	
+	<style>
+		#outerdiv {
+width:600px;
+height:325px;
+overflow:hidden;
+position:relative;
+}
+#camDisplay{
+position:absolute;
+top:-140px;
+left:-318px;
+width:1280px;
+height:1100px;
+}
+	</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">Modules</a>
+        </div>   
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+    	<div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="" style="text-align: center"> Public cameras</a></li>
+          </ul>
+          <p style=" word-wrap: break-word;">With this module journalists could connect to free local cameras to monitorize any activity they are interested in that is publically available. 
+	 </p>
+          <br>
+          <p style=" word-wrap: break-word;"><span class="quest">How we can implement it in our tool:</span><br>
+          	This module relates to gathering data to write an article. Therefore, it makes sense to include it on the editor section. 
+          	<br>
+          <p style=" word-wrap: break-word;"><span class="quest">What's the benefit for the journalist?</span><br>
+In some instances, they won’t have to physically move to several spots just to record it because they will be able to virtually move there from their office.
+</p>
+        
+        </div>
+        
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+			<h1> Please select the location you wish to connect to</h1>
+				
+			<select id="selectBox" class="form-control" onchange="changeFunc();">
+				  <option value="0">Kleinzand 19 ,Sneek(The Netherlands)</option>
+				  <option value="1">Grevskogen,Norway</option>
+				  <option value="2">Tenbat Rd,Guam</option>
+				  <option value="3">Kleinzand 19 ,Sneek(The Netherlands)</option>
+				  <option value="4">Largo da Praia 8,Portugal</option>
+				  
+			</select>
+			<br>
+			<div class="row">
+				<div class="col-md-6">
+					<div id="outerdiv">
+						 <iframe id="camDisplay" width="800" height="400" src="https://5336f0b5b9017.click2stream.com/" scrolling="no" frameborder="0"></iframe>
+                    </div>
+
+		   <!-- <iframe id="camDisplay" src="http://adamscam.click2stream.com/" style="width:600px;height:400px;
+		    "
+		    ></iframe>-->
+		    </div>
+		    <div class="col-md-6">
+		    <div id="googleMap" style="width:400px;height:325px;"></div>
+		    </div>
+		    </div>
+		  
+	    <br>
+	    <br>
+	    <div class="row">
+	    	<div class="col-md-6">
+		    	<div class="well">
+				      	<p>
+				      	
+				  &lt;head> <br>
+				&lt;meta charset="UTF-8"> <br>
+				&lt;meta name="description" content="The number of registered businesses in Sneek increased by just over 65 thousand in 2014"> <br>
+				&lt;meta name="keywords" content="<strong>Sneek,business,economy,Netherlands</strong>"> <br>
+				&lt;meta name="author" content="Hege Refsnes"> <br>
+				&lt;meta name="geo.position" content="<strong>29.797751;-2.900391</strong>" /> <br>
+			    &lt;meta name="google" content="nositelinkssearchbox" /> <br>
+				&lt;title>More and More Small Businesses in The Netherlands &lt;/title><br>
+				&lt;/head>
+				  </p>
+				</div>
+		    </div>
+		    <div class="col-md-6">
+		    	<div class="well">
+				      	<p><h3 style="text-align: center">More and More Small Businesses in The Netherlands </h3><br>
+				      	<i>The number of registered businesses in Sneek increased by just over 65 thousand in 2014</i>.
+				      	<br>
+				      	by: Hege Refsnes <br><br>
+				      	<a href="">Read article</a>
+				      		</p>
+		    </div>
+	    </div>
+	   </div>
+	  </div>
+	</body>
+	<script>
+	//just starting we hide all the well divs
+	$(document).ready(function(){
+		$(".well").addClass("hidden");
+		
+	});
+	
+	$("button").click(function(){
+		var img = $("<img />").attr('src', 'https://maps.googleapis.com/maps/api/streetview?size=600x300&location='
+		+locationData.lat()+","+locationData.lng())
+    .load(function() {
+        if (!this.complete || typeof this.naturalWidth == "undefined" || this.naturalWidth == 0) {
+            alert('broken image!');
+        } else {
+            $("#div1").append(img);
+        }
+    });
+});
+	
+</script>
+	<script>
+	//here the code for changing the camera
+		function changeFunc() {
+		    var selectBox = document.getElementById("selectBox");
+		    var selectedValue = parseInt($("#selectBox").val());
+		    var camera="http://adamscam.click2stream.com/";
+		    switch(selectedValue){
+		    	case 0:camera="https://5336f0b5b9017.click2stream.com/"; //sneek,netherlands
+						options={ 
+						  	center: new google.maps.LatLng(53.0329, 5.6633),
+						    zoom:10,
+						    mapTypeId:google.maps.MapTypeId.ROADMAP
+						    };
+						break;
+		    	case 3:camera="https://53d24300859d3.click2stream.com/";//Largo da Praia 8
+					   options={ 
+						  	center: new google.maps.LatLng(37.096692, -8.471457),
+						    zoom:9,
+						    mapTypeId:google.maps.MapTypeId.ROADMAP
+						    };
+		    			break;
+				case 1:camera="https://504eefb70e078.click2stream.com/"; //Grevskogen
+						options={ 
+						  	center: new google.maps.LatLng(59.2858, 10.4181),
+						    zoom:9,
+						    mapTypeId:google.maps.MapTypeId.ROADMAP
+						    };
+						break;
+				case 2:camera="https://garage-7.click2stream.com/"; //Tenbat Rd
+					    options={ 
+						  	center: new google.maps.LatLng(13.444, 144.786),
+						    zoom:9,
+						    mapTypeId:google.maps.MapTypeId.ROADMAP
+						    };
+						break;
+		    }
+		    $("#camDisplay").attr("src",camera);
+		    new google.maps.Map(document.getElementById("googleMap"),options);
+   }
+	</script>
+	<script>
+	//here the code for changing the map	
+		
+
+var map,autocomplete,marker,locationData,options;
+function initialize(){
+  myCenter=new google.maps.LatLng(53.0329, 5.6633);
+  options={ 
+  	//bounds: defaultBonds,
+  	center:myCenter,
+    zoom:15,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+    };
+  
+  map=new google.maps.Map(document.getElementById("googleMap"),options); //we create the map
+  
+  //MARKER
+  marker = new google.maps.Marker({
+  position: myCenter,
+  title:'Click to zoom',
+  animation:google.maps.Animation.BOUNCE
+  });
+  
+  marker.setMap(map);
+  
+  //OTHER ARTICLES
+  //article1
+  article1 = new google.maps.Marker({
+  position: new google.maps.LatLng(53.030648, 5.661985),
+  title:'Click for details',
+  icon:'img/icons/article-01.png'
+  });
+  article1.setMap(map);
+
+  //article2
+  article2 = new google.maps.Marker({
+  position: new google.maps.LatLng(53.033835, 5.665333),
+  title:'Click for details',
+  icon:'img/icons/article-01.png'
+  });
+  article2.setMap(map);
+  
+  //article3
+  article3 = new google.maps.Marker({
+  position: new google.maps.LatLng(53.033796, 5.661106),
+  title:'Click for details',
+  icon:'img/icons/article-01.png'
+  });
+  article3.setMap(map);
+  
+  //listeners
+  
+  google.maps.event.addListener(marker,'click',function() {
+  map.setZoom(9);
+  map.setCenter(marker.getPosition());
+  });
+  
+  google.maps.event.addListener(article1,'click',function(){
+  	getArticleInformation();
+  });
+  google.maps.event.addListener(article1,'mouseover',function(){
+	  	var infowindow = new google.maps.InfoWindow({
+	    content:"More and More Small Businesses in The Netherlands",
+	  	});
+	   
+	    infowindow.open(map,article1);
+  });
+  google.maps.event.addListener(article2,'mouseover',function(){
+	  	var infowindow2 = new google.maps.InfoWindow({
+	    content:"Sneek in danger",
+	  	});
+	   
+	    infowindow2.open(map,article2);
+  });
+  
+  
+  var myCity = new google.maps.Circle({
+  center:myCenter,
+  radius:250,
+  strokeColor:"#0000FF",
+  strokeOpacity:0.8,
+  strokeWeight:2,
+  fillColor:"#0000FF",
+  fillOpacity:0.4
+  });
+
+myCity.setMap(map);
+ }
+ 
+ 
+ 
+ //it is important to call initialize only when the down is ready
+ google.maps.event.addDomListener(window,"load",initialize);
+ 
+ function onPlaceChanged() {
+  var place = autocomplete.getPlace();
+  if (place.geometry) {
+    map.panTo(place.geometry.location);
+    map.setZoom(15);
+  } else {
+    document.getElementById('pac-input').placeholder = 'Enter a city';
+  }
+}
+ 
+ function placeMarker(location){
+ 	locationData=location;
+ 	marker.setMap(null);
+ 	marker=new google.maps.Marker({
+    position: location,
+    map: map,
+  });
+  	var infowindow = new google.maps.InfoWindow({
+    content: 'Latitude: ' + location.lat() + '<br>Longitude: ' + location.lng()
+  });
+  infowindow.open(map,marker);
+}
+
+function getArticleInformation(){
+	$(".well").removeClass("hidden");
+	
+}
+	</script>
+</html>

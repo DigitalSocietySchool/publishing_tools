@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Modules for the future journalists ">
+    <meta name="author" content="Javier Trujillo">
+
+    <title>Modules</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/bootstrap/dashboard.css" rel="stylesheet">
+	<style>
+
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.cent{
+	position:relative;
+	left:18%;
+}
+
+.quest{
+    		font-style: italic;
+    		font-size: 20px;
+    	}
+  .titles{
+  	width:70%;
+  	margin:0 auto;
+  	margin-top:30px;
+  }
+  .titles h2{
+  	text-align:center;
+  }
+	#logoScribe{
+	height:56px;
+	position:relative;
+	left:3%;
+}
+</style>
+<body>
+ 
+   <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+      	<a href="../../../../Scribe/modules.html">
+          <img id="logoScribe"  src="../../../img/icons/logo.png" />
+        </a> 
+       
+        
+        </div>
+    </nav>
+	 <div class="container-fluid">
+    	<div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="" style="text-align: center"> Sentiment Analysis</a></li>
+          </ul>
+          <p style=" word-wrap: break-word;">Analize the general mood of a given text.</p>
+          <br>
+          <p style=" word-wrap: break-word;"><span class="quest">How we can implement it in our tool:</span><br>
+          	In the social feed section, the journalist can analyze the overall sentiment of the readers.
+          	 <br>
+          <p style=" word-wrap: break-word;"><span class="quest">What's the benefit for the journalist?</span><br>
+They would be able to know what people think about their article, a very useful feedback they can make use of to adapt their stories according to make them more prominent.</p>
+        
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+			<div class="row">
+            <div class="col-sm-4">
+              <img  alt="200x200" src="smiley-02.png"> 
+              <div class="cent">
+              <h4>Positive</h4>
+              </div>
+              <span class="text-muted">Colorful,confident,peace..</span>
+      		</div>
+            <div class=" col-sm-4">
+              <img alt="200x200" src="smiley-03.png">
+              <div class="cent">
+              <h4>Negative</h4>
+              </div>
+              <span class="text-muted">Adverse,addicted,dangerous..</span>
+            </div>
+            <div class=" col-sm-4 ">
+              <img alt="200x200" src="smiley-01.png">
+              <div class="cent">
+              <h4>Neutral</h4>
+               </div>
+              <span class="text-muted">Assumption,basically,actual..</span>
+            </div>
+          </div>
+   		 <br>
+          <br>
+         
+          
+      <div class="titles">
+        <h2 >Titles to analize</h2>
+        <ul class="list-group">
+		  <li class="list-group-item">Weather today is rubbish</li>
+		  <li class="list-group-item">This cake looks amazing</li>
+		  <li class="list-group-item">His skills are mediocre</li>
+		  <li class="list-group-item">He is very talented</li>
+		  <li class="list-group-item">She is seemingly very agressive</li>
+		  <li class="list-group-item">Marie was enthusiastic about the upcoming trip. Her brother was also passionate about her leaving - he would finally have the house for himself.</li>
+		  <li class="list-group-item">To be or not to be?</li>
+		  <li class="list-group-item">The joys and dangers of exploring</li>
+		</ul>
+		<a href="test.php">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Check</button>
+        </a>
+	</div>
+		</div>
+        </div>	
+    </div>
+		
+
+	</body>
+</html>

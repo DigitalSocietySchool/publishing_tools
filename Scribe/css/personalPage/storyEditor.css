@@ -1,0 +1,239 @@
+
+
+.hid{
+	visibility:hidden;
+}
+
+ .hidden{
+    	display:none;
+    }
+a{
+	color:inherit;
+}
+
+button{
+	background-color:#e94c3d;
+	color:white;
+}
+
+/* Style for the head navigation */
+.navbar-inverse {
+  background-color: #0b1014;
+  border-color: #080808;
+}
+
+.rightCorner{
+	float:right;
+}
+
+    /* Style for the left navigation. It is meant to be in order from top to bottom */
+    .navleft{
+    	
+    }
+    .mainMenu{
+    	position:relative;
+    	right:25%;
+    }
+    .mainMenu p{
+    	text-align:center;
+    	position:relative;
+    	top:10px;
+    }
+    .mainMenu hr{
+    	width:50%;
+    	border-top: 1px solid #251616;
+    }
+    
+    .mainMenu img{
+    	position:relative;
+    	bottom:20px;
+    	top:-10px;
+
+    	left:95%;
+    	height:30px;
+    	width:30px;
+    }
+    
+    
+    .geoContent .mainMenu p,.predictionContent .mainMenu p{
+    	color:black;
+    }
+    
+   	.navleft .nav>li>a{
+   		padding:10px 15px;
+   		color:#ecf0f1;
+   	}
+   	.navleft .nav>li>a>img{
+   		position:relative;
+   		top:-2px;
+   		margin-right: 20px;
+   	}
+   	
+   	.sidebar{
+   		background-color:#34495e;
+   	}
+   	
+   	
+   	.nav-sidebar > .active > a, .nav-sidebar > .active > a:hover, .nav-sidebar > .active > a:focus{
+   		background-color:#2A3F51;
+   	}
+   	
+    .recommendedWords a:hover{
+    	cursor:pointer;
+    }
+
+/******************************************************************
+ **************PERSONAL CONTENT FOR THE PAGE **********************
+ ******************************************************************/
+
+    /*class for the modules items */
+    .modulesNav{
+    	  width: 90%;
+		  position: relative;
+		  left: 6%;
+    	
+    }
+    .modulesNav li{
+    	position:relative;
+    	display:block;
+    	padding: 10px 15px;
+        color: #ecf0f1;
+    }
+    
+    /*second left Navigation column */
+    .secondLeftNav{
+    	left:11.8%;
+    	background-color:#ecf0f1;
+    	width:22%;
+    }
+   	
+   	.well{
+   		background-color:white;
+   	}
+   	
+   	#score{
+   		text-align:center;
+   		color:green;
+   		font-size:20px;
+   	}
+   	.impactWords{
+   		color:red;
+   	}
+   	/* article main content */
+   	.miniNav{position:relative;left:5%;}
+   	.miniNav a{
+    	text-decoration:underline;
+    }
+    
+    
+    .annotation{
+    	background:url('img/storyeditor/editorTool/annotation.png') no-repeat center;
+    	position:absolute;
+    	height:90px;
+    	width:240px;
+    	right:1%;
+    	top:29%;
+    	z-index: 30;
+    }
+    .annotation button{
+    	position:relative;
+    	left:75%;
+    	top:8%;
+    	background-color:white;
+    	color:#E94C3D;
+    	padding:3px;
+    	padding-right:5px;
+    	padding-left:5px;
+    }
+    
+    /*------- ARTICLE ----------*/
+    /* article page style */
+   	.articleContentDiv{
+   		left:33.5%;
+   		background-color: inherit;
+   	}
+   	
+    .articlePage{
+    	position:relative;
+    	top:30px;
+    	padding:30px;
+    	padding-top:16px;
+    	margin-left: auto;
+	    margin-right: auto;
+	    width: 60%;
+	    background-color: white;
+    }
+    
+    .articleTitle h2{
+    	font-size:26px;
+    }
+   	.articlePage>button{
+   		float:right;
+   	}
+   	
+    .articleImage{
+    	height:300px;
+    	margin-top: 10px;
+    	margin-bottom:20px;
+    }
+    .articleImageBack1:hover{
+    	background:url('img/storyeditor/editorTool/photo1transparant.png') no-repeat center;
+    }
+    
+    
+    .articleImageBack1{
+    	  background:url('img/storyeditor/editorTool/photo1.png') no-repeat center;
+    }
+    .articleImageBack2{
+    	  background:url('img/storyeditor/editorTool/photo2.png') no-repeat center;
+    }
+    
+    
+    .pinMenu{
+    	position:relative;
+    	top:30%;
+    	width:300px;
+    	height:110px;
+    	margin-left: auto;
+	    margin-right: auto;
+	    background:url('../../img/storyeditor/editorTool/overlay.png') no-repeat center;
+    }
+    
+    .pinMenu button{
+    	background-color:#337291;
+    }
+    
+    
+    /*------- END ARTICLE ----------*/
+    /*---------------- PinBoard:Modal ---------------- */
+   .placeholder img{
+   	border-radius:0;
+   }
+   .borders img{
+    	border-radius:0;
+    	border: 0.1em solid;
+  		border-color: #A0A0A0;
+    }
+    .modal-header{
+    	color:white;
+    	border-bottom: 0;
+    	background-color:#337291;
+    }
+    .modal-body{
+    	background-color:#ecf0f1;
+    }
+    
+    #newArticleImage:hover{
+    	opacity:0.6;
+    }
+    
+    /*BACK to style the article */
+    .articleBody hr{
+    	width:50%;
+    	margin-left: auto;
+	    margin-right: auto;
+	    border-top:1px solid #e94c3d;
+    }
+    
+
+   	
